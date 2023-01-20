@@ -1,10 +1,10 @@
-let now;
-let date;
+let todaysDate;
+let dateDisplay;
 let hour;
 
 $(document).ready(function () {
-    now = moment().format("MMMM Do YYYY");
-    date = document.querySelector("today");
-    date.innerHTML = now;
+    todaysDate = moment().format("MMMM Do YYYY");
+    dateDisplay = document.querySelector("#currentDay");
+    dateDisplay.innerHTML = todaysDate;
     hour = moment().format("HH");
 });
