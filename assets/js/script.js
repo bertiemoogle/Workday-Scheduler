@@ -11,7 +11,6 @@ $(document).ready(function () {
 
     $(".row").each(function () {
       var appointmentRow = $(this).attr("id").split("-")[1];
-      
       if (currentHour == appointmentRow) {
         $(this).addClass("present");
       } else if (currentHour < appointmentRow) {

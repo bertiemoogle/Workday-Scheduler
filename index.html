@@ -1,105 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en-gb">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <title>Work Day Scheduler</title>
-  </head>
-
-  <body>
-    <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentTime" class="lead displayDate"></p>
-    </header>
-
-    <div class="container">
-      <div id="hourNine" class="row">
-        <div class="col-lg-1"></div>
-        <div class="col-lg-1 hour"><span id="9">09am</span></div>
-        <textarea class="col-lg-8 time-block description" placeholder="Enter appointment here"></textarea>
-        <button type="button" class="col-md-1 saveBtn"><i class="fas fa-lock"></i></button>
-        <div class="col-lg-1"></div>
-      </div>
-      <div id="hourTen" class="row">
-        <div class="col-lg-1"></div>
-        <div class="col-lg-1 hour"><span id="10">10am</span></div>
-        <textarea class="col-lg-8 time-block description" placeholder="Enter appointment here"></textarea>
-        <button type="button" class="col-md-1 saveBtn"><i class="fas fa-lock"></i></button>
-        <div class="col-lg-1"></div>
-      </div>
-      <div id="hourEleven" class="row">
-        <div class="col-lg-1"></div>
-        <div class="col-lg-1 hour"><span id="11">11am</span></div>
-        <textarea class="col-lg-8 time-block description" placeholder="Enter appointment here"></textarea>
-        <button type="button" class="col-md-1 saveBtn"><i class="fas fa-lock"></i></button>
-        <div class="col-lg-1"></div>
-      </div>
-      <div id="hourTwelve" class="row">
-        <div class="col-lg-1"></div>
-        <div class="col-lg-1 hour"><span id="12">12pm</span></div>
-        <textarea class="col-lg-8 time-block description" placeholder="Enter appointment here"></textarea>
-        <button type="button" class="col-md-1 saveBtn"><i class="fas fa-lock"></i></button>
-        <div class="col-lg-1"></div>
-      </div>
-      <div id="hourOnePm" class="row">
-        <div class="col-lg-1"></div>
-        <div class="col-lg-1 hour"><span id="13">01pm</span></div>
-        <textarea class="col-lg-8 time-block description" placeholder="Enter appointment here"></textarea>
-        <button type="button" class="col-md-1 saveBtn"><i class="fas fa-lock"></i></button>
-        <div class="col-lg-1"></div>
-      </div>
-      <div id="hourTwoPm" class="row">
-        <div class="col-lg-1"></div>
-        <div class="col-lg-1 hour"><span id="14">02pm</span></div>
-        <textarea class="col-lg-8 time-block description" placeholder="Enter appointment here"></textarea>
-        <button type="button" class="col-md-1 saveBtn"><i class="fas fa-lock"></i></button>
-        <div class="col-lg-1"></div>
-      </div>
-      <div id="hourThreePm" class="row">
-        <div class="col-lg-1"></div>
-        <div class="col-lg-1 hour"><span id="15">03pm</span></div>
-        <textarea class="col-lg-8 time-block description" placeholder="Enter appointment here"></textarea>
-        <button type="button" class="col-md-1 saveBtn"><i class="fas fa-lock"></i></button>
-        <div class="col-lg-1"></div>
-      </div>
-      <div id="hourFourPm" class="row">
-        <div class="col-lg-1"></div>
-        <div class="col-lg-1 hour"><span id="16">04pm</span></div>
-        <textarea class="col-lg-8 time-block description" placeholder="Enter appointment here"></textarea>
-        <button type="button" class="col-md-1 saveBtn"><i class="fas fa-lock"></i></button>
-        <div class="col-lg-1"></div>
-      </div>
-      <div id="hourFivePm" class="row">
-        <div class="col-lg-1"></div>
-        <div class="col-lg-1 hour"><span id="17">05pm</span></div>
-        <textarea class="col-lg-8 time-block description" placeholder="Enter appointment here"></textarea>
-        <button type="button" class="col-md-1 saveBtn"><i class="fas fa-lock"></i></button>
-        <div class="col-lg-1"></div>
-      </div>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="assets/script.js"></script>
-  </body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -136,11 +34,13 @@
       
     </header>
 
+    <!-- Hourly appointment rows. Information typed into them is stored for retrieval in localStorage. -->
+
     <div class="container">
       <div id="hour-09" class="row">
         <div class="col-lg-1 end"></div>
         <div class="col-lg-1 hour"><span id="9">9am</span></div>
-        <textarea class="col-lg-8 time-block description" placeholder="Add appointments here"></textarea>
+        <textarea class="col-lg-8 time-block description" placeholder="Enter appointments here"></textarea>
         <button type="button" class="col-lg-1 saveBtn"><i class="fas fa-lock"></i></button>
         <div class="col-lg-1 end"></div>
       </div>
@@ -148,7 +48,7 @@
       <div id="hour-10" class="row">
         <div class="col-lg-1 end"></div>
         <div class="col-lg-1 hour"><span id="10">10am</span></div>
-        <textarea class="col-lg-8 time-block description" placeholder="Add appointments here"></textarea>
+        <textarea class="col-lg-8 time-block description" placeholder="Enter appointments here"></textarea>
         <button type="button" class="col-lg-1 saveBtn"><i class="fas fa-lock"></i></button>
         <div class="col-lg-1 end"></div>
       </div>
@@ -156,7 +56,7 @@
       <div id="hour-11" class="row">
         <div class="col-lg-1 end"></div>
         <div class="col-lg-1 hour"><span id="11">11am</span></div>
-        <textarea class="col-lg-8 time-block description" placeholder="Add appointments here"></textarea>
+        <textarea class="col-lg-8 time-block description" placeholder="Enter appointments here"></textarea>
         <button type="button" class="col-lg-1 saveBtn"><i class="fas fa-lock"></i></button>
         <div class="col-lg-1 end"></div>
       </div>
@@ -164,7 +64,7 @@
       <div id="hour-12" class="row">
         <div class="col-lg-1 end"></div>
         <div class="col-lg-1 hour"><span id="12">12pm</span></div>
-        <textarea class="col-lg-8 time-block description" placeholder="Add appointments here"></textarea>
+        <textarea class="col-lg-8 time-block description" placeholder="Enter appointments here"></textarea>
         <button type="button" class="col-lg-1 saveBtn"><i class="fas fa-lock"></i></button>
         <div class="col-lg-1 end"></div>
       </div>
@@ -172,7 +72,7 @@
       <div id="hour-13" class="row">
         <div class="col-lg-1 end"></div>
         <div class="col-lg-1 hour"><span id="13">1pm</span></div>
-        <textarea class="col-lg-8 time-block description" placeholder="Add appointments here"></textarea>
+        <textarea class="col-lg-8 time-block description" placeholder="Enter appointments here"></textarea>
         <button type="button" class="col-lg-1 saveBtn"><i class="fas fa-lock"></i></button>
         <div class="col-lg-1 end"></div>
       </div>
@@ -180,7 +80,7 @@
       <div id="hour-14" class="row">
         <div class="col-lg-1 end"></div>
         <div class="col-lg-1 hour"><span id="14">2pm</span></div>
-        <textarea class="col-lg-8 time-block description" placeholder="Add appointments here"></textarea>
+        <textarea class="col-lg-8 time-block description" placeholder="Enter appointments here"></textarea>
         <button type="button" class="col-lg-1 saveBtn"><i class="fas fa-lock"></i></button>
         <div class="col-lg-1 end"></div>
       </div>
@@ -188,7 +88,7 @@
       <div id="hour-15" class="row">
         <div class="col-lg-1 end"></div>
         <div class="col-lg-1 hour"><span id="15">3pm</span></div>
-        <textarea class="col-lg-8 time-block description" placeholder="Add appointments here"></textarea>
+        <textarea class="col-lg-8 time-block description" placeholder="Enter appointments here"></textarea>
         <button type="button" class="col-lg-1 saveBtn"><i class="fas fa-lock"></i></button>
         <div class="col-lg-1 end"></div>
       </div>
@@ -196,7 +96,7 @@
       <div id="hour-16" class="row">
         <div class="col-lg-1 end"></div>
         <div class="col-lg-1 hour n"><span id="16">4pm</span></div>
-        <textarea class="col-lg-8 time-block description" placeholder="Add appointments here"></textarea>
+        <textarea class="col-lg-8 time-block description" placeholder="Enter appointments here"></textarea>
         <button type="button" class="col-lg-1 saveBtn"><i class="fas fa-lock"></i></button>
         <div class="col-lg-1 end"></div>
       </div>
@@ -204,7 +104,7 @@
       <div id="hour-17" class="row">
         <div class="col-lg-1 end"></div>
         <div class="col-lg-1 hour"><span id="17">5pm</span></div>
-        <textarea class="col-lg-8 time-block description" placeholder="Add appointments here"></textarea>
+        <textarea class="col-lg-8 time-block description" placeholder="Enter appointments here"></textarea>
         <button type="button" class="col-lg-1 saveBtn"><i class="fas fa-lock"></i></button>
         <div class="col-lg-1 end"></div>
       </div>
