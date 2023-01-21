@@ -7,10 +7,11 @@ $(document).ready(function () {
 
     let currentHour = moment().format("HH");
   
-    // Compares the current time with the hourly appointment rows. Slots change colour accordingly.
+    // Compares the current time with the hourly appointment rows. Slots change colour according to
+    // whether they are "present", "future" or "past".
 
     $(".row").each(function () {
-      var appointmentRow = $(this).attr("id").split("-")[1];
+      let appointmentRow = $(this).attr("id").split("-")[1];
       if (currentHour == appointmentRow) {
         $(this).addClass("present");
       } else if (currentHour < appointmentRow) {
@@ -26,12 +27,14 @@ $(document).ready(function () {
 
     $(".saveBtn").click(function (event) {
       event.preventDefault();
-      var value = $(this).siblings(".time-block").val();
-      var time = $(this).parent().attr("id").split("-")[1];
+
+      let time = $(this).parent().attr("id").split("-")[1];
+      let value = $(this).siblings(".time-block").val();
+      
       localStorage.setItem(time, value);
     });
   
-    // Retrieves values from local storage.
+    // Retrieves values from local storage. Can be cleared using "localStorage.clear()" in the console.
 
     $("#hour-09 .time-block").val(localStorage.getItem("09"));
     $("#hour-10 .time-block").val(localStorage.getItem("10"));
