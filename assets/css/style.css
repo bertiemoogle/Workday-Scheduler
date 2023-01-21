@@ -5,6 +5,10 @@ body {
   line-height: 1;
 }
 
+.end {
+  background-color: #E5E0FF;
+}
+
 textarea {
   background: transparent;
   border: none;

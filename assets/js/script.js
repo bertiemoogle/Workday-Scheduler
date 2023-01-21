@@ -1,4 +1,4 @@
-// Sets current date and time.
+// Sets current date and time and sends the info to the HTML file to render to the page.
 
 $(document).ready(function () {
     let todaysDate = moment().format("MMMM Do YYYY");
@@ -7,7 +7,8 @@ $(document).ready(function () {
 
     let currentHour = moment().format("HH");
   
-// Compares the current time with the hourly appointment rows.
+    // Compares the current time with the hourly appointment rows. Slots change colour accordingly.
+
     $(".row").each(function () {
       var appointmentRow = $(this).attr("id").split("-")[1];
       
@@ -22,7 +23,8 @@ $(document).ready(function () {
       }
     });
   
-    //grabs values from time and value divs and saves them to local storage
+    // Saves contents of the appointment slots to local storage.
+
     $(".saveBtn").click(function (event) {
       event.preventDefault();
       var value = $(this).siblings(".time-block").val();
@@ -30,7 +32,8 @@ $(document).ready(function () {
       localStorage.setItem(time, value);
     });
   
-    //retrieves items from local storage and sets them in proper places
+    // Retrieves values from local storage.
+
     $("#hour-09 .time-block").val(localStorage.getItem("09"));
     $("#hour-10 .time-block").val(localStorage.getItem("10"));
     $("#hour-11 .time-block").val(localStorage.getItem("11"));
@@ -42,49 +45,3 @@ $(document).ready(function () {
     $("#hour-17 .time-block").val(localStorage.getItem("17"));
   });
 
-// let todaysDate;
-// let displayDate;
-// let hour;
-// let row;
-
-// $(document).ready(function () {
-//     todaysDate = moment().format("MMMM Do YYYY");
-//     displayDate = document.querySelector(".displayDate");
-//     displayDate.innerHTML = todaysDate;
-
-    
-
-//     hour = moment().format("HH");
-
-//     $(".row").each(function () {
-//         row = $(this).attr("id").split("-")[1];
-//     })
-
-//     if (hour === row) {
-//         $(this).addClass("present");
-//     } else if (hour < row) {
-//         $(this).removeClass("present");
-//         $(this).addClass("future");
-//     } else if (hour > row) {
-//         $(this).removeClass("future");
-//         $(this).addClass("past");
-//     }
-
-
-// $(".saveBtn").click(function (event) {
-//     event.preventDefault();
-//     let value = $(this).siblings(".time-block").val();
-//     let time = $(this).parent().attr("id").split("-")[1];
-//     localStorage.setItem(time, value); 
-// })
-
-// $("#hourNine .time-block").val(localStorage.getItem("9"));
-// $("#hourTen .time-block").val(localStorage.getItem("10"));
-// $("#hourEleven .time-block").val(localStorage.getItem("11"));
-// $("#hourTwelve .time-block").val(localStorage.getItem("12"));
-// $("#hourOnePm .time-block").val(localStorage.getItem("13"));
-// $("#hourTwoPm .time-block").val(localStorage.getItem("14"));
-// $("#hourThreePm .time-block").val(localStorage.getItem("15"));
-// $("#hourFourPm .time-block").val(localStorage.getItem("16"));
-// $("#hourFivePm .time-block").val(localStorage.getItem("17"));
-// });
