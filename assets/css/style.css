@@ -42,8 +42,6 @@ textarea {
   padding-top: 30px;
   color: #000000;
   border: 1px solid black;
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
 }
 
 .past {
@@ -63,8 +61,6 @@ textarea {
 
 .saveBtn {
   border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
   background-color: #06aed5;
   color: white;
 }
