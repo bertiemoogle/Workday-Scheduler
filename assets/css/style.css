@@ -5,10 +5,6 @@ body {
   line-height: 1;
 }
 
-.end {
-  background-color: #E5E0FF;
-}
-
 textarea {
   background: transparent;
   border: none;
@@ -46,6 +42,14 @@ textarea {
   padding-top: 30px;
   color: #000000;
   border: 1px solid black;
+}
+
+.end {
+  background-color: #E5E0FF;
+}
+
+.container {
+  padding-bottom: 50px;
 }
 
 .past {
