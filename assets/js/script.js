@@ -1,17 +1,26 @@
+// Declare variables.
+
+let todaysDate;
+let displayDate;
+let currentHour;
+let appointmentRow;
+let appHour;
+let appText;
+
 // Sets current date and time and sends the info to the HTML file to render to the page.
 
 $(document).ready(function () {
-    let todaysDate = moment().format("MMMM Do YYYY");
-    let displayDate = document.getElementById("currentDay");
+    todaysDate = moment().format("MMMM Do YYYY");
+    displayDate = document.getElementById("currentDay");
     displayDate.innerHTML = todaysDate;
 
-    let currentHour = moment().format("HH");
+    currentHour = moment().format("HH");
   
-    // Compares the current time with the hourly appointment rows. Slots change colour according to
-    // whether they are "present", "future" or "past".
+    // Compares the current time with the hourly appointment rows. Using CSS the slots change colour 
+    // according to whether they are "present", "future" or "past".
 
     $(".row").each(function () {
-      let appointmentRow = $(this).attr("id").split("-")[1];
+      appointmentRow = $(this).attr("id").split("-")[1];
       if (currentHour == appointmentRow) {
         $(this).addClass("present");
       } else if (currentHour < appointmentRow) {
@@ -28,10 +37,10 @@ $(document).ready(function () {
     $(".saveBtn").click(function (event) {
       event.preventDefault();
 
-      let time = $(this).parent().attr("id").split("-")[1];
-      let value = $(this).siblings(".time-block").val();
+      appHour = $(this).parent().attr("id").split("-")[1];
+      appText = $(this).siblings(".time-block").val();
       
-      localStorage.setItem(time, value);
+      localStorage.setItem(appHour, appText);
     });
   
     // Retrieves values from local storage. Can be cleared using "localStorage.clear()" in the console.
