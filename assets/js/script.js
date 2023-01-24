@@ -21,7 +21,7 @@ $(document).ready(function () {
 
     $(".row").each(function () {
       appointmentRow = $(this).attr("id").split("-")[1];
-      if (currentHour == appointmentRow) {
+      if (currentHour === appointmentRow) {
         $(this).addClass("present");
       } else if (currentHour < appointmentRow) {
         $(this).removeClass("present");
@@ -36,7 +36,6 @@ $(document).ready(function () {
 
     $(".saveBtn").click(function (event) {
       event.preventDefault();
-
       appHour = $(this).parent().attr("id").split("-")[1];
       appText = $(this).siblings(".time-block").val();
       
