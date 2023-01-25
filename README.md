@@ -8,6 +8,8 @@ The header was straightforward enough (apart fron displaying the date), and I wa
 
 Happily there is plenty of information about local storage on MDN, which was really the main part of this challenge. Using local storage is something I very much enjoy doing, and will be trying to think how I could incorporate it into an app I could put on my portfolio. The "present, "past" and "future" system was very similar to the changing of questions and answers in last week's challenge, so I didn't have too much trouble with that. And, as I say, setting and getting local storage information is practically a joyful experience.
 
+Making the display responsive down to the very smallest sizes proved problematic. At col-xs sizes the .hour button spread across the whole screen, and no amount of resizing in the CSS file seemed to affect it. 
+
 I made some slight changes to the CSS just to make the page look more aesthetically pleasing to myself. I hope that's not something I will be marked down for. 
 
 <https://bertiemoogle.github.io/Workday-Scheduler/>

@@ -83,4 +83,16 @@ textarea {
   transition: all 0.3s ease-in-out;
 }
 
+@media screen and (max-width: 480px) {
+  textarea {
+    padding: 0;
+    height: 60px;
+    border: 0;
+  }
 
+  .hour {
+    border: 0;
+    padding: 0;
+    height: 40px;
+  }
+}
