@@ -40,11 +40,12 @@ textarea {
   white-space: pre-wrap;
   height: 80px;
   margin-bottom: 1px;
+  width: 100%;
 }
 
 .hour {
   background-color: #ffffff;
-  font-size: 1.5rem;
+  font-size: 20px;
   padding-top: 30px;
   color: #000000;
   border: 1px solid black;
@@ -74,9 +75,12 @@ textarea {
   border-left: 1px solid black;
   background-color: #06aed5;
   color: white;
+  width: 80px
 }
 
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
+
+
